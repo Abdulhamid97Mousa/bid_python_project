@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+// Add or remove an AgentSpeak belief
+message BeliefMutation {
+  enum Op { ADD = 0; REMOVE = 1; }
+  Op        op        = 1;
+  string    predicate = 2;
+  repeated string args = 3;
+}
+
+// Add or remove a complete AgentSpeak plan
+message PlanMutation {
+  enum Op { ADD = 0; REMOVE = 1; }
+  Op     op   = 1;
+  uint32 prio = 2;      // keep 0 if you don't care
+  string plan = 3;      // full "+!goal : ctx <- body."
+}
