@@ -1,5 +1,16 @@
-spade-bdi==0.3.2        # BDI wrapper
-python-agentspeak>=1.0  # ASL interpreter if you still need it
-protobuf>=4.25.0        # Google Protocol Buffers
-pyzmq>=25.1.1           # ZeroMQ transport
+spade-bdi==0.3.2               # BDI wrapper Create hybrid agents with a BDI layer for the SPADE MAS Platform
+
+### Note that you won't be able to install spade-bdi without the following dependencies:
+# having a rustc compiler installed
+# having the `cargo` command available in your PATH
+# $ export PATH="$HOME/.cargo/bin:$PATH"
+# having the `spade` package installed in your Python environment
+
+agentspeak==0.2.2            # A Python-based interpreter for the agent-oriented programming language JASON.
+pygments-agentspeak>=1.0     # Syntax highlighting for AgentSpeak
+
+protobuf==6.31.1       # Google Protocol Buffers
+pyzmq==27.0.0           # ZeroMQ transport
 asyncio                 # std-lib, explicit for readability
+requests==2.32.4
+wget==3.2
